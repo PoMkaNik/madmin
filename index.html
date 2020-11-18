@@ -12,7 +12,7 @@
   <title>mAdmin | Custom Materialize Dashboard</title>
 </head>
 
-<body>
+<body class="grey lighten-4">
   <nav class="blue darken-2">
     <div class="container">
       <div class="nav-wrapper">
@@ -175,6 +175,178 @@
     </div>
   </section>
 
+  <!-- section Recent Posts and TODOs -->
+  <section class="section section-recent">
+    <div class="row">
+      <div class="col s12 m6 l8">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Recent Posts</span>
+            <table class="striped">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Category</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Post One</td>
+                  <td>Web Development</td>
+                  <td>
+                    <a href="details.html" class="btn blue lighten-2">Details</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Post Two</td>
+                  <td>Graphic Design</td>
+                  <td>
+                    <a href="details.html" class="btn blue lighten-2">Details</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Post Three</td>
+                  <td>Web Development</td>
+                  <td>
+                    <a href="details.html" class="btn blue lighten-2">Details</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Quick Todos</span>
+            <form id="todo-form">
+              <div class="input-field">
+                <input id="todo" type="text" placeholder="Add Todo...">
+              </div>
+            </form>
+            <ul class="collection todos">
+              <li class="collection-item">
+                <div>Todo One <a href="#!" class="secondary-content delete">
+                    <i class="material-icons">close</i>
+                  </a></div>
+              </li>
+              <li class="collection-item">
+                <div>Todo Two <a href="#!" class="secondary-content delete">
+                    <i class="material-icons">close</i>
+                  </a></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="section blue darken-2 white-text center">
+    <p>mAdmin Panel Copyright &copy; 2020</p>
+  </footer>
+
+  <!-- fixed action btn -->
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large red">
+      <i class="material-icons">add</i>
+    </a>
+    <ul>
+      <li>
+        <a href="#post-modal" class="modal-trigger btn-floating blue">
+          <i class="material-icons">mode_edit</i>
+        </a>
+      </li>
+      <li>
+        <a href="#category-modal" class="modal-trigger btn-floating blue">
+          <i class="material-icons">folder</i>
+        </a>
+      </li>
+      <li>
+        <a href="#user-modal" class="modal-trigger btn-floating blue">
+          <i class="material-icons">supervisor_account</i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- add post modal -->
+  <div id="post-modal" class="modal">
+    <div class="modal-content">
+      <h4>Add Post</h4>
+      <form>
+        <div class="input-field">
+          <input type="text" id="title">
+          <label for="title">Title</label>
+        </div>
+        <div class="input-field">
+          <select name="category" id="category">
+            <option value="" disabled selected>Select Category</option>
+            <option value="1">Web Development</option>
+            <option value="2">Graphic Design</option>
+            <option value="3">NodeJS</option>
+            <option value="4">Other</option>
+          </select>
+          <label for="category">Category</label>
+        </div>
+        <div class="input-field">
+          <textarea type="text" name="body" id="body" class="materialize-textarea"></textarea>
+          <!-- <label for="body">Body</label> -->
+        </div>
+      </form>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close btn blue white-text">Submit</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- add category modal -->
+  <div id="category-modal" class="modal">
+    <div class="modal-content">
+      <h4>Add Category</h4>
+      <form>
+        <div class="input-field">
+          <input type="text" id="title">
+          <label for="title">Title</label>
+        </div>
+      </form>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close btn blue white-text">Submit</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- add user modal -->
+  <div id="user-modal" class="modal">
+    <div class="modal-content">
+      <h4>Add User</h4>
+      <form>
+        <div class="input-field">
+          <input type="text" id="name">
+          <label for="name">Name</label>
+        </div>
+        <div class="input-field">
+          <input type="email" id="email">
+          <label for="email">Email</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="password1">
+          <label for="password1">Password</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="password2">
+          <label for="password2">Confirm Password</label>
+        </div>
+      </form>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close btn blue white-text">Submit</a>
+      </div>
+    </div>
+  </div>
+
 
   <!-- preloader -->
   <div class="loader preloader-wrapper big active">
@@ -199,6 +371,8 @@
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <!-- Font Awesome -->
   <script src="js/all.min.js"></script>
+  <!-- CKEditor -->
+  <script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
   <!-- CanvasJS -->
   <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
   <script src="js/chart.js"></script>
@@ -235,7 +409,7 @@
             html: 'Comment Approved',
             displayLength: 3000
           });
-        })
+        });
 
         $('.deny').click(function (e) {
           e.preventDefault();
@@ -243,7 +417,42 @@
             html: 'Comment Denied',
             displayLength: 3000
           });
+        });
+
+        // quick todos
+        $('#todo-form').submit(function (e) {
+          e.preventDefault();
+          const output = `<li class="collection-item">
+                <div>${$('#todo').val()}<a href="#!" class="secondary-content delete"><i class="material-icons">close</i></a></div></li>`;
+          $('.todos').append(output);
+          $('#todo').val('');
+          M.toast({
+            html: 'Todo added',
+            displayLength: 3000
+          })
+        });
+
+        // delete todos
+        $('.todos').on('click', '.delete', function (e) {
+          e.preventDefault();
+          $(this).parent().parent().remove();
+          M.toast({
+            html: 'Todo removed',
+            displayLength: 3000
+          })
         })
+
+        // fixed-floating-btn init
+        $('.fixed-action-btn').floatingActionButton();
+
+        // modal init
+        $('.modal').modal();
+
+        // select init
+        $('select').formSelect();
+
+        // CKEditor
+        CKEDITOR.replace('body');
 
       });
     }, 1000)
