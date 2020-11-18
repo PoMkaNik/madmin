@@ -13,6 +13,72 @@
 </head>
 
 <body>
+  <nav class="blue darken-2">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo">mAdmin</a>
+        <a href="#" data-target="side-nav" class="sidenav-trigger show-on-large right">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li class="active">
+            <a href="index.html">Dashboard</a>
+          </li>
+          <li>
+            <a href="posts.html">Posts</a>
+          </li>
+          <li>
+            <a href="categories.html">Categories</a>
+          </li>
+          <li>
+            <a href="comments.html">Comments</a>
+          </li>
+          <li>
+            <a href="users.html">Users</a>
+          </li>
+        </ul>
+        <!-- sidenav -->
+        <ul id="side-nav" class="sidenav">
+          <li>
+            <div class="user-view">
+              <div class="background">
+                <img src="img/ocean.jpg" alt="ocean-bg">
+              </div>
+              <a href="#!">
+                <img src="img/person1.jpg" alt="user" class="circle">
+              </a>
+              <a href="#"><span class="name white-text">John Doe</span></a>
+              <a href="#"><span class="email white-text">jahndoe@gmail.com</span></a>
+            </div>
+          </li>
+          <li>
+            <a href="index.html"><i class="material-icons">dashboard</i>Dashboard</a>
+          </li>
+          <li>
+            <a href="posts.html">Posts</a>
+          </li>
+          <li>
+            <a href="categories.html">Categories</a>
+          </li>
+          <li>
+            <a href="comments.html">Comments</a>
+          </li>
+          <li>
+            <a href="users.html">Users</a>
+          </li>
+          <li>
+            <div class="divider"></div>
+          </li>
+          <li>
+            <a class="subheader">Account Controls</a>
+          </li>
+          <li>
+            <a href="login.html" class="waves-effect">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <!--jQuery-->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -24,6 +90,8 @@
   <script>
     $(document).ready(function () {
       // Custom JS & jQuery
+      // sidenav init
+      $('.sidenav').sidenav();
 
     });
   </script>
